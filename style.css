@@ -1,0 +1,208 @@
+:root {
+    --primary: #3498db;
+    --dark: #2c3e50;
+    --light: #f4f6f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: #333;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8%;
+    background: var(--dark);
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    /* 🔥 CHANGE BACKGROUND IMAGE HERE */
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    object-fit: cover;
+    transition: box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 25px rgba(52,152,219,0.4);
+}
+
+.main-img {
+    width: 180px;
+    height: 180px;
+    animation: floatMain 6s ease-in-out infinite;
+}
+
+.second-img {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    bottom: -15px;
+    right: -25px;
+    opacity: 0.9;
+    animation: floatSecond 7s ease-in-out infinite;
+}
+
+@keyframes floatMain {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes floatSecond {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.skill-card,
+.project-card,
+.calc-box,
+.cv-box {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.calc-box:hover,
+.cv-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button, .btn {
+    margin-top: 15px;  /* <-- this pushes the button down */
+    padding: 5px 10px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(52,152,219,0.3);
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 15px;
+}
+/* Add spacing between hero elements */
+.hero-content h1 {
+    margin-top: 20px;  /* moves your name down slightly */
+}
+
+.hero-content .role {
+    margin-top: 10px;  /* moves the first tagline down */
+    font-size: 1.2rem;
+}
+
+.hero-content .tagline {
+    margin-top: 15px;  /* moves the second tagline down */
+    font-size: 1rem;
+}
+.hero-content .btn {
+    margin-top: 15px;  /* moves the second tagline down */
+    font-size: 1rem;
+}

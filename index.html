@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUTWAZA Joel | Frontend Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">Joel Portfolio</div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#cv-generator">CV Generator</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+<div class="hero-content">
+
+    <div class="image-wrapper">
+        <!-- Replace these with your real images -->
+        <img src="photo1.jpeg" class="profile-img main-img">
+        <img src="bbbbbb.jpg" class="profile-img second-img">
+    </div>
+
+    <h1>RUTWAZA Joel</h1>
+    <p class="role">Frontend Developer</p>
+    <p class="tagline">
+        Designing modern, responsive and user-focused web interfaces.
+    </p>
+
+    <!-- 🔥 CHANGE THIS TO YOUR REAL GITHUB -->
+    <a href="https://github.com/joehub2026" target="_blank" class="btn">
+        Visit My GitHub
+    </a>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+<h2>About Me</h2>
+<p class="center-text">
+Year II Computer Science student at INES-Ruhengeri,
+focused on building clean, scalable and user-centered interfaces.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+    <div class="skill-card">HTML5</div>
+    <div class="skill-card">CSS3</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">GitHub</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+<h2>Academic Projects</h2>
+<article class="project-card">
+    <h3>Musanze Tourism Website</h3>
+    <p>Localized tourism booking platform for Northern Province.</p>
+    <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    <a href="https://github.com/joehub2026/Personal-Portfolio/commits?author=joehub2026" class="btn">GitHub Repository</a>
+</article>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="reveal">
+<div class="calc-box">
+<h2>Student GPA Calculator</h2>
+
+<div class="input-group">
+    <input type="number" class="course-mark" placeholder="Module 1 (%)" min="0" max="100">
+    <input type="number" class="course-mark" placeholder="Module 2 (%)" min="0" max="100">
+    <input type="number" class="course-mark" placeholder="Module 3 (%)" min="0" max="100">
+    <input type="number" class="course-mark" placeholder="Module 4 (%)" min="0" max="100">
+</div>
+
+<button onclick="calculateGPA()">Calculate</button>
+
+<div class="result">
+    <p id="gpa-output"></p>
+    <p id="class-output"></p>
+</div>
+
+</div>
+</section>
+
+<!-- CV GENERATOR -->
+<section id="cv-generator" class="reveal">
+<h2>CV Generator</h2>
+<div class="cv-box">
+    <input type="text" id="cv-name" placeholder="Full Name">
+    <input type="email" id="cv-email" placeholder="Email">
+    <input type="text" id="cv-skills" placeholder="Skills (comma separated)">
+    <input type="text" id="cv-education" placeholder="Education">
+    <button onclick="generateCV()">Download CV</button>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+<h2>Contact</h2>
+<form id="contact-form">
+    <textarea placeholder="Enter your message..." required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>&copy; <span id="year"></span> RUTWAZA Joel</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
